@@ -16,10 +16,18 @@ int main()
 
 	int sum=n+days;
 	int p=( sum % 7 );
-	if(sum<=7)
-		iter=sum-1;
+	int q=( days% 7	);
+	
+//	if(sum<=7)
+//		iter=sum-1;
+//	else
+//		iter=p;
+
+	if (p == 0)
+		iter=q+n;
 	else
 		iter=p;
+
 
 	switch (iter)
 	{

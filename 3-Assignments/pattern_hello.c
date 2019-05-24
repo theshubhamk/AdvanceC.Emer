@@ -12,8 +12,33 @@ int main()
 
 //	scanf("%d", &n);
 	
-	for(line=1;line<4;line++)
+	for(line=4;line>=0;line--)
 	{
+		for(ele=1;ele<a;ele++)
+		{
+			printf("_");
+		}
+		a=a+1;
+		
+		for(j=0;j<3;j++)
+		{
+			printf("hello");
+		}
+
+		for(k=4;k>m;k--)
+		{
+			printf("_");
+		}
+		m=m+2;
+
+		for(p=0;p<line;p++)
+		{
+			printf("hello");
+		}
+
+
+		
+		
 		for(ele=1;ele<a;ele++)
 		{
 			printf("_");
@@ -31,10 +56,13 @@ int main()
 		}
 		m=m+2;
 
-		for(p=0;p<=line;p++)
+		for(p=0;p<line;p++)
 		{
 			printf("hello");
 		}
+
+
+
 		printf("\n");
 	}
 		return 0;
