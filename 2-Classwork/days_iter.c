@@ -8,13 +8,18 @@ int main()
 	int n;
 	int iter,days;
 	
-	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat :` ");
+	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat : ");
 	scanf("%d", &n);
 	printf("enter no. of days");
 	scanf("%d", &days);
 	
-	int p=( days % 7 );
-	iter=n+p;
+
+	int sum=n+days;
+	int p=( sum % 7 );
+	if(sum<=7)
+		iter=sum-1;
+	else
+		iter=p;
 
 	switch (iter)
 	{

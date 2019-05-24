@@ -1,8 +1,8 @@
 
 
 
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 
 int main()
@@ -14,7 +14,7 @@ int main()
 	
 	for(line=1;line<4;line++)
 	{
-		for(ele=1;ele<=a;ele++)
+		for(ele=1;ele<a;ele++)
 		{
 			printf("_");
 		}
