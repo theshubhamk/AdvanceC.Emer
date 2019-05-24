@@ -6,15 +6,15 @@ int main()
 	system("clear");
 	
 	int n;
-	int iter;
+	int iter,days;
 	
-	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat ");
+	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat :` ");
 	scanf("%d", &n);
 	printf("enter no. of days");
 	scanf("%d", &days);
 	
 	int p=( days % 7 );
-	int iter=n+p;
+	iter=n+p;
 
 	switch (iter)
 	{
