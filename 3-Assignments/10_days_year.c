@@ -1,3 +1,12 @@
+/*		TITLE: Given a no. 1-365.Find which day of the year it is.
+		AUTHOR: Shubham Kumar Singh
+		DATE: Fri May 24 15:20:34 IST 2019
+		DESCRIPTION: Input: the start day and the no. of days
+			     Output: Print the resulting day.
+*/
+
+
+
 #include<stdio.h>
 #include<stdlib.h>
 
