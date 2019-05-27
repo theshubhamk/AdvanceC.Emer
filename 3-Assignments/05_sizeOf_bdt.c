@@ -15,16 +15,13 @@ int main()
 	//clear the screen
 	system("clear");
 	
-	//core logic
 	printf("Sizeof(char): %zu\n", sizeof(char));
 	printf("Sizeof(signed char): %zu\n", sizeof(signed char));
 	printf("Sizeof(unsigned char): %zu\n", sizeof(unsigned char));
 	
-	
 	printf("Sizeof(int): %zu\n", sizeof(int));
 	printf("Sizeof(signed int): %zu\n", sizeof(signed int));
 	printf("Sizeof(unsigned int): %zu\n", sizeof(unsigned int));
-
 	
 	printf("Sizeof(short int): %zu\n", sizeof(short int));
 	printf("Sizeof(long int): %zu\n", sizeof(long int));

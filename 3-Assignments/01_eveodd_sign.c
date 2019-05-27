@@ -16,7 +16,7 @@ int main()
 	system("clear");
 
 	//declare vars
-	int num,i,range =1;
+	int num, i, range = 1;
 	
 	//prompt for input
 	printf("ENTER A NUMBER:    ");
@@ -36,23 +36,19 @@ int main()
 	int upper =  range;
 
 	//sum of the number with itself
-	int maxvalue=num+num;	
+	int maxvalue = num + num;	
 
 	//check for zero.
 	if (num == 0)
 	{
-
 		printf("THE NUMBER IS %d . its neither even nor odd ", num);
-
 	}
 	else
 	{
 		 //check for error i.e within range or not
-
 		if (lower < num && num < upper)	
 		{
 			//core logic
-		   
 		   //this line checks for even/odd. if the remainder is zero the number is even else odd 
 			if ((num % 2) == 0) 
 			{

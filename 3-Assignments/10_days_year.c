@@ -35,21 +35,26 @@ int main()
 	int sum = n + days;
 
 	//get the reminder with respect to repeating value 7.
-	int p=(sum % 7);
-	int q=(days % 7);
+	int rem1=(sum % 7);
+	int rem2=(days % 7);
 	
 	//if the remainder is 0 i.e the sum is multiple of 7 then do remainder plus 1st day else just go to the rem of no.of days and 7.
-	if (p == 0)
-		iter = q + n;
+	if (rem1 == 0)
+		iter = rem2 + n - 1;
 	else
-		iter = p;
+		iter = rem1 - 1;
 
 	//Switch to the required day and print it.
 	switch (iter)
 	{
+		case 0:
+			printf("sat");
+			break;
+
 		case 1: 
 			printf("sun");
 			break;
+
 		case 2:
 			printf("mon");
 			break;
