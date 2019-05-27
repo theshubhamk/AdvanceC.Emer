@@ -16,7 +16,7 @@ int main()
 	system("clear");
 
 	//declare vars
-	int num,i,range=1;
+	int num,i,range =1;
 	
 	//prompt for input
 	printf("ENTER A NUMBER:    ");
@@ -25,17 +25,20 @@ int main()
 	scanf("%d", &num);
 
 	//range calculation loop
-	for(i=1;i<=20;i++)
+	for (i = 1;i <= 20;i++)
 	{
 		range=range*2;
 	}
+	//lower range to check validity
+	int lower = -range;	
 
-	int lower = -range;
+	//upper range to check validity
 	int upper =  range;
-	int maxvalue=num+num; // sum of the number with itself
-	
 
-	//check for zero
+	//sum of the number with itself
+	int maxvalue=num+num;	
+
+	//check for zero.
 	if (num == 0)
 	{
 
@@ -44,51 +47,43 @@ int main()
 	}
 	else
 	{
-		
-		if (lower<num && num<upper) //check for error i.e within range or not
+		 //check for error i.e within range or not
+
+		if (lower < num && num < upper)	
 		{
 			//core logic
-			if ((num % 2) == 0)     //even/odd check
+		   
+		   //this line checks for even/odd. if the remainder is zero the number is even else odd 
+			if ((num % 2) == 0) 
 			{
-				if (maxvalue < num)  //signed/unsigned check
+				
+				//check for signed/unsigned. if the number added with itself is less than number then the number is signed else unsigned
+				if (maxvalue < num) 
 				{
-
 					printf("number is even and signed\n");
-
 				}
 				else
 				{
-
 					printf("number is even and unsigned\n");
-
 				}
 			}
 			else
 			{
 				if (maxvalue < num)
 				{
-
 					printf("number is odd and signed\n");
-
 				}
 				else
 				{	
-
 					printf("number is odd and unsigned\n");
-				
 				}
 			}
 		}
 		else
 		{
-
 				printf("number is out of range\n");
-	
 		}
 		
 	}
 	return 0;
-	
-
-
 }

@@ -16,8 +16,7 @@ int main()
 	system("clear");
 	
 	//declare variables
-	int n;
-	int iter,days;
+	int n, iter,days;
 	
 	//prompt user for day input
 	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat : ");
@@ -26,23 +25,26 @@ int main()
 	scanf("%d", &n);
 	
 	//prompt user for no. of days input
-	printf("enter no. of days");
+	printf("enter no. of days: ");
 	
 	//read user input
 	scanf("%d", &days);
 	
 	//core logic
-	int sum=n+days;
-	int p=( sum % 7 );
-	int q=( days% 7	);
+	//the sum of 1st day and no. of days
+	int sum = n + days;
+
+	//get the reminder with respect to repeating value 7.
+	int p=(sum % 7);
+	int q=(days % 7);
 	
-
+	//if the remainder is 0 i.e the sum is multiple of 7 then do remainder plus 1st day else just go to the rem of no.of days and 7.
 	if (p == 0)
-		iter=q+n;
+		iter = q + n;
 	else
-		iter=p;
+		iter = p;
 
-
+	//Switch to the required day and print it.
 	switch (iter)
 	{
 		case 1: 
