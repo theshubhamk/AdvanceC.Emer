@@ -12,25 +12,30 @@
 
 int main()
 {
+	//clear the output screen
 	system("clear");
 	
+	//declare variables
 	int n;
 	int iter,days;
 	
+	//prompt user for day input
 	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat : ");
+	
+	//read user input
 	scanf("%d", &n);
+	
+	//prompt user for no. of days input
 	printf("enter no. of days");
+	
+	//read user input
 	scanf("%d", &days);
 	
-
+	//core logic
 	int sum=n+days;
 	int p=( sum % 7 );
 	int q=( days% 7	);
 	
-//	if(sum<=7)
-//		iter=sum-1;
-//	else
-//		iter=p;
 
 	if (p == 0)
 		iter=q+n;
