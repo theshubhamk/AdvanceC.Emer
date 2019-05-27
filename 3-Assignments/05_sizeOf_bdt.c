@@ -1,8 +1,21 @@
-#include<stdio.h>
-#include<limits.h>
+/*		TITLE: Size of Basic data types.
+		AUTHOR: Shubham Kumar Singh
+		DATE: Fri May 24 16:10:14 IST 2019
+		DESCRIPTION: Input: no user input
+			     Output: Print the sizes of all basic data types
+*/
+
+
+
+#include <stdio.h>
+#include <limits.h>
 
 int main()
 {
+	//clear the screen
+	system("clear");
+	
+	//core logic
 	printf("Sizeof(char): %zu\n", sizeof(char));
 	printf("Sizeof(signed char): %zu\n", sizeof(signed char));
 	printf("Sizeof(unsigned char): %zu\n", sizeof(unsigned char));
