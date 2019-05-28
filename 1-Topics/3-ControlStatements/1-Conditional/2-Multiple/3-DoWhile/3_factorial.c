@@ -7,17 +7,31 @@ int main()
 	system("clear");
 
 	//declare vars
-	int num,n,fact=1;
-
-	//prompt
-	printf("enter a number:\n");
-
-	//read
-	scanf("%d", &n);
-
-	for(num=n;num>0;num--)
+	long int num, n;
+	long int fac;
+	char opt;
+	do
 	{
-		fact=fact*num;
-	}
-	printf("the factorial is %d", fact);
+		fac = 1;
+		//prompt
+		printf("enter a number:\n");
+
+		//read
+		scanf("%ld", &n);
+		
+		//logic
+		for(num = n;num > 1;num--)
+		{
+			fac = (fac * num);
+		}
+		printf("the factorial is %ld \n", fac);
+		
+		//prompt user for confirmation
+		printf("Do you want to try again? press Y/y or N/n :  ");
+
+		//read user response
+		scanf("\n %c", &opt);
+
+	}while ( opt == 'Y' || opt == 'y' );
+	return 0;
 }
