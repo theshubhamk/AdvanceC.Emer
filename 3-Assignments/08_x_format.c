@@ -18,12 +18,15 @@ int main()
 		scanf("%d", &n);
 		
 		//core logic
+		//if the number is odd run a different loop so that in the middle part of the pattern there is no blank disrupting the pattern.
 		if ( n % 2 == 0)
 		{
+			//next two for loops creates an n X n matrix
 			for ( line = 1;line <= n;line++)
 			{
 				for ( i = 1;i <= n;i++)
 				{
+					//below 'if' conditions prints only the diagonal elements of the matrix and prints rest elements as blank
 					if ((i + line) == (n + 1)  || (i == line))
 					{	
 						printf("hello");
