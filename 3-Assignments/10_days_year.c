@@ -14,67 +14,75 @@ int main()
 {
 	//clear the output screen
 	system("clear");
-	
-	//declare variables
-	int n, iter,days;
-	
-	//prompt user for day input
-	printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat : ");
-	
-	//read user input
-	scanf("%d", &n);
-	
-	//prompt user for no. of days input
-	printf("enter no. of days: ");
-	
-	//read user input
-	scanf("%d", &days);
-	
-	//core logic
-	//the sum of 1st day and no. of days
-	int sum = n + days;
-
-	//get the reminder with respect to repeating value 7.
-	int rem1=(sum % 7);
-	int rem2=(days % 7);
-	
-	//if the remainder is 0 i.e the sum is multiple of 7 then do remainder plus 1st day else just go to the rem of no.of days and 7.
-	if (rem1 == 0)
-		iter = rem2 + n - 1;
-	else
-		iter = rem1 - 1;
-
-	//Switch to the required day and print it.
-	switch (iter)
+	char opt;
+	do
 	{
-		case 0:
-			printf("sat");
-			break;
+		//declare variables
+		int n, iter,days;
+		
+		//prompt user for day input
+		printf("enter the day 1. sun   2. mon 3. tue 4. wed 5. thu 6. fri 7. sat : ");
+		
+		//read user input
+		scanf("%d", &n);
+		
+		//prompt user for no. of days input
+		printf("enter no. of days: ");
+		
+		//read user input
+		scanf("%d", &days);
+		
+		//core logic
+		//the sum of 1st day and no. of days
+		int sum = n + days;
 
-		case 1: 
-			printf("sun");
-			break;
+		//get the reminder with respect to repeating value 7.
+		int rem1=(sum % 7);
+		int rem2=(days % 7);
+		
+		//if the remainder is 0 i.e the sum is multiple of 7 then do remainder plus 1st day else just go to the rem of no.of days and 7.
+		if (rem1 == 0)
+			iter = rem2 + n - 1;
+		else
+			iter = rem1 - 1;
 
-		case 2:
-			printf("mon");
-			break;
-		case 3:
-			printf("tue");
-			break;	
-		case 4:
-			printf("wed");
-			break;	
-		case 5:
-			printf("thu");
-			break;
-		case 6:
-			printf("fri");
-			break;
-		case 7:
-			printf("sat");
-			break;
-		default:		
-			break;
-	}
+		//Switch to the required day and print it.
+		switch (iter)
+		{
+			case 0:
+				printf("sat");
+				break;
+
+			case 1: 
+				printf("sun");
+				break;
+
+			case 2:
+				printf("mon");
+				break;
+			case 3:
+				printf("tue");
+				break;	
+			case 4:
+				printf("wed");
+				break;	
+			case 5:
+				printf("thu");
+				break;
+			case 6:
+				printf("fri");
+				break;
+			case 7:
+				printf("sat");
+				break;
+			default:		
+				break;
+		}
+		//prompt user for continuation
+		printf("\ndo you wish to continue? [Yy] [Nn]\n");
+
+		//read user response
+		scanf("\n%c", &opt);
+	}while (opt == 'Y' || opt == 'y');
 	return 0;
 }

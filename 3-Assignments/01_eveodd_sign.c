@@ -45,14 +45,13 @@ int main()
 	}
 	else
 	{
-		 //check for error i.e within range or not
+		//check for error i.e within range or not
 		if (lower < num && num < upper)	
 		{
 			//core logic
-		   //this line checks for even/odd. if the remainder is zero the number is even else odd 
+			//this line checks for even/odd. if the remainder is zero the number is even else odd 
 			if ((num % 2) == 0) 
-			{
-				
+			{	
 				//check for signed/unsigned. if the number added with itself is less than number then the number is signed else unsigned
 				if (maxvalue < num) 
 				{
@@ -79,7 +78,6 @@ int main()
 		{
 				printf("number is out of range\n");
 		}
-		
 	}
 	return 0;
 }

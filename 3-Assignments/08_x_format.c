@@ -1,3 +1,10 @@
+/*		TITLE: print hello in X pattern
+		AUTHOR: Shubham Kumar Singh
+		DATE: Wed May 29 15:50:58 IST 2019
+		DESCRIPTION: Input: the start day and the no. of days
+			     Output: Print the resulting day.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
