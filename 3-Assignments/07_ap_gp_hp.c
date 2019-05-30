@@ -38,32 +38,17 @@ int main()
 		scanf("%d", &n);
 
 		//logic for A.P 
-		printf("A.P:\t");
+		printf("A.P\t\t G.P\t\t H.P\t\t\n");
 		ap=a;
-		for (r = 1;r <= n;r++)
-		{
-			printf("%0.1f\t", ap);
-			ap = ap + d;
-		}
-		printf("\n");
-		//logic for G.P
-		printf("G.P:\t");
 		gp=a;
-		for (r = 1;r <= n;r++)
-		{
-			printf("%0.2f\t", gp);
-			gp = gp * d;
-		}
-		printf("\n");
-		//logic for H.P
-		printf("H.P:\t");
 		hp=a;
+
 		for (r = 1;r <= n;r++)
 		{
-			zp=(1 / hp);
-			printf("%0.2f\t", zp);
-			hp = hp + d;
-
+			printf("%0.1f\t\t %0.2f\t\t %0.2f\t\t\n", ap , gp ,hp);
+			ap = ap + d;	
+			gp = gp * d;	
+			hp=(1 / ap);
 		}
 		printf("\n");
 		//prompt user for continuation

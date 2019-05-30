@@ -36,8 +36,13 @@ int main()
 	int upper =  range;
 
 	//sum of the number with itself
-	int maxvalue = num + num;	
-
+	int maxvalue = num + num;
+/*
+	if (lower > num && num > upper)
+	{
+		printf("number is out of range\n");	
+	}
+*/
 	//check for zero.
 	if (num == 0)
 	{

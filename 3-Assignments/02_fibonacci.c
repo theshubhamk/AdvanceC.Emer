@@ -17,7 +17,7 @@ int main()
 	do
 	{
 		//declare vars
-		int n ,a=0 ,b=1 ,nextTerm=0,p;
+		int n, a = 0 ,b = 1 ,nextTerm = 0,p;
 		
 		//prompt user
 		printf("enter the value of n\n");

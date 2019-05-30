@@ -23,9 +23,9 @@ int main()
 	printf("oct\t dec\t hex\t char\t\n");
 
 	//run  loop to cover all the ascii values
-	for(i=0;i<=127;i++)
+	for(i = 0;i <= 127;i++)
 	{
-		if ( i<=32 && i>=0 || i==127)
+		if ( i <= 32 && i >= 0 || i == 127)
 		{
 			//print non printables for the values which can't be displayed
 			printf("%o\t %d\t %X\t NON PRINTABLE\t\n",i,i,i);
