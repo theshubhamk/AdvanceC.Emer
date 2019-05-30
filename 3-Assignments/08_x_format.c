@@ -25,16 +25,28 @@ int main()
 		scanf("%d", &n);
 		
 		//core logic
-		//if the number is odd run a different loop so that in the middle part of the pattern there is no blank disrupting the pattern.
-		if ( n % 2 == 0)
+		for ( line = 1;line <= n;line++)
 		{
-			//next two for loops creates an n X n matrix
-			for ( line = 1;line <= n;line++)
+			for ( i = 1;i <= n;i++)
 			{
-				for ( i = 1;i <= n;i++)
+				if ((((n+1)/2)) == line && line  == i && (i+line)==(n+1)) 
 				{
-					//below 'if' conditions prints only the diagonal elements of the matrix and prints rest elements as blank
-					if ((i + line) == (n + 1)  || (i == line))
+					printf("hello");
+				}
+				if ((i>((n+1)/2)))
+				{
+					if ((i + line) == (n + 1)  || (i == line)) 	
+					{	
+						printf(" hello");
+					}
+					else
+					{
+						printf(" ");
+					}
+				}
+				else
+				{
+					if ((i + line) == (n + 1)  || (i == line)) 	
 					{	
 						printf("hello");
 					}
@@ -43,51 +55,15 @@ int main()
 						printf(" ");
 					}
 				}
-				printf("\n");
 			}
-		}
-		else
-		{
-			for ( line = 1;line <= n;line++)
-			{
-				for ( i = 1;i <= n;i++)
-				{
-					if ((((n+1)/2)) == line && line  == i && (i+line)==(n+1)) 
-					{
-						printf("hello");
-					}
-					if ((i>((n+1)/2)))
-					{
-						if ((i + line) == (n + 1)  || (i == line)) 	
-						{	
-							printf(" hello");
-						}
-						else
-						{
-							printf(" ");
-						}
-					}
-					else
-					{
-						if ((i + line) == (n + 1)  || (i == line)) 	
-						{	
-							printf("hello");
-						}
-						else
-						{
-							printf(" ");
-						}
-					}
-				}
-				printf("\n");
-			}
+			printf("\n");
 		}
 		//prompt user to continue
 		printf("Do you want to continue? [Y/y] [N/n]\n");
 
 		//read user option
 		scanf("\n%c", &opt);
-	}while(opt == 'Y' || opt == 'y');
-
+	}while (opt == 'Y' || opt == 'y');
+	return 0;
 }
 

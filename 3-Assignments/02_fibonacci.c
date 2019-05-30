@@ -17,7 +17,7 @@ int main()
 	do
 	{
 		//declare vars
-		int n ,a=0 ,b=1 ,c=0,p;
+		int n ,a=0 ,b=1 ,nextTerm=0,p;
 		
 		//prompt user
 		printf("enter the value of n\n");
@@ -30,23 +30,23 @@ int main()
 		if (n < 0)
 		{
 			p = n * -1;
-			while (c <= p && c >= n)
+			while (nextTerm <= p && nextTerm >= n)
 			{
-				printf("[%d]\n", c);
+				printf("[%d]\n", nextTerm);
 				a = b;
-				b = c;
-				c = a - b;
+				b = nextTerm;
+				nextTerm = a - b;
 			}
 		}
 		//+ve fibonacci series.
 		else
 		{
-			while (c <= n)
+			while (nextTerm <= n)
 			{
-				printf("[%d]\n", c);
+				printf("[%d]\n", nextTerm);
 				a = b;
-				b = c;
-				c = a + b;
+				b = nextTerm;
+				nextTerm = a + b;
 			}
 		}
 		//prompt user for continuation
