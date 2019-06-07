@@ -1,3 +1,13 @@
+/*		TITLE: Print bits of a given no. with its sign.
+		AUTHOR: Shubham Kumar Singh
+		DATE: Fri Jun  6 12:40:05 IST 2019
+		DESCRIPTION: Input: A number from user.
+			     Output: Print the bits with sign.
+*/
+
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -8,29 +18,46 @@ int main()
 	system("clear");
 
 	//declare vars
-	unsigned mask, num, result;
-
+	unsigned mask, num, result, num1, result1;
+	int i;
 	//prompt user
 	printf("enter the number\n");
 
 	//read user
-	scanf("%X", &num);
-
+	scanf("%d", &num);
+	num1 = -num;
 	//logic
+	printf("%d : \n", num);
 	mask = 1 << 31;
-	if ( num & mask )
-	{0000000
-		result = 1;
-	}
-	else
+	for (i = 0;i < 32;i++)
 	{
-		result = 0;
+		if (num & mask)
+		{
+			putchar('1');
+		}
+		else
+		{
+			putchar('0');
+		}
+		mask = mask >> 1;
 	}
-
-//num & m1? res=1 :res=0 ;
-	printf("%d\n", result);
-
-	
+	printf("\n");
+	//for -ve number
+	printf("%d : \n", num1);
+	mask = 1 << 31;
+	for (i = 0;i < 32;i++)
+	{
+		if (num1 & mask)
+		{
+			putchar('1');
+		}
+		else
+		{
+			putchar('0');
+		}
+		mask = mask >> 1;
+	}
+	printf("\n");
 }
 
 
