@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
 {
@@ -14,45 +15,36 @@ int main()
 	scanf("%d", &num);
 
 	int arr[num+1];
-	
+
 	for (i = 0;i <= num;i++)
 	{
 		arr[i] = i;
 	}
 	arr[0] = arr[1] = 0;
-
-//	for(m=0;m<=num;m++)
-//	{
-//		printf("%d\n", arr[m]);
-//	}
-
-
-//	for (j = 2;j <= 20;j++)
-//	{	
-/*		if(arr[j] == 0)
+	for (j = 2;j <= sqrt(num);j++)
+	{   
+		if(arr[j] != 0)
 		{
-			continue;
-		}
-		else
-		{
-			printf("%d\n", arr[j]);
-		}
-
-*/
-		for(i = 2;i <= num;i++)
-		{
-			if((arr[i+1] / arr[i]) == 0)
+			for(i = j;i <= num;i++)	
 			{
-				arr[i+1] = 0;
+				int op;
+				op = arr[i+1] % arr[j];
+				if(op == 0)
+				{
+					arr[i+1] = 0;
+				}
 			}
 		}
 
 
-//	}
+	}
 
 	for(i=0;i<=num;i++)
 	{
-		printf("%d\n", arr[i]);
+		if(arr[i] != 0)
+		{
+			printf("%d\n", arr[i]);
+		}
 	}
 
 }
