@@ -25,6 +25,8 @@ int main()
 	int num_of_bits, pos, out;
 
 	//prompt + read user
+//	printf("select the option 1. get_nbits 2.
+
 	printf("Enter the number: ");
 	scanf("%hhd", &num);
 		
@@ -36,7 +38,7 @@ int main()
 
 	printf("Enter the position: ");
 	scanf("%d", &pos);
-
+	
 	//call and print get_nbits
 	printf("1) the answer of get_nbits is %d\n", get_nbits(num, num_of_bits));
 
