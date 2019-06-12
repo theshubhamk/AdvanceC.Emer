@@ -25,7 +25,7 @@ int main()
 	int num_of_bits, pos, out;
 
 	//prompt + read user
-//	printf("select the option 1. get_nbits 2.
+//	printf("select the option 1. get_nbits 2.replace_nbits 3.replace_nbits 4.replace_n_bits_from_position 5.toggle_n_bits_from_position
 
 	printf("Enter the number: ");
 	scanf("%hhd", &num);
@@ -45,7 +45,7 @@ int main()
 	//call and print replace_nbits
 	printf("2) the answer of replace_nbits is %d\n", replace_nbits(num, num_of_bits,val));
 	
-	//call and print get_nbits_from_postion
+	//call and print replace_nbits
 	printf("3) the answer for get_nbits_from_position is %d\n", get_nbits_from_pos(num, num_of_bits, pos));
 
 	//call and print replace_n_bits_from_position

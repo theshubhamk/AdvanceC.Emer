@@ -21,10 +21,18 @@ int main()
 	//declare vars
 	unsigned char num;
 	int n, x;
-
+	unsigned mask;
 	//prompt + read user
 	printf("Enter the number\n");
 	scanf("%hhd", &num);
+
+	printf("\n");
+	mask = 1 << (sizeof(int) << 3) - 1;
+	for( ;mask; mask >>= 1)
+	{
+		num & mask? putchar('1'): putchar('0');
+	}		
+	putchar('\n');	
 
 	printf("Enter the number of rotations\n");
 	scanf("%d", &n);
@@ -36,9 +44,23 @@ int main()
 	{
 		case 1:
 			printf("the number after %d roations is %hhd\n", n, circular_right_rot(num, n));
+			printf("\n");
+			mask = 1 << (sizeof(int) << 3) - 1;
+			for( ;mask; mask >>= 1)
+			{
+				circular_right_rot(num, n) & mask? putchar('1'): putchar('0');
+			}		
+			putchar('\n');
 			break;
 		case 2:
 			printf("the number after %d roations is %hhd\n", n, circular_left_rot(num, n));
+			printf("\n");
+			mask = 1 << (sizeof(int) << 3) - 1;
+			for( ;mask; mask >>= 1)
+			{
+				circular_left_rot(num, n) & mask? putchar('1'): putchar('0');
+			}		
+			putchar('\n');
 			break;
 		default :
 			printf("Please select 1 or 2\n");

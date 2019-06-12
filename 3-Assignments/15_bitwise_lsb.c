@@ -17,7 +17,7 @@ int main()
 	system("clear");
 
 	//declare vars
-	unsigned num, val;
+	unsigned num, val, mask;
 	int bits, b, a;
 
 	//prompt + read user
@@ -34,12 +34,18 @@ int main()
 
 	//call and print function
 	printf("the new value is %d\n", bitwise_lsb(num, val, a, b));
-
+	printf("\n");
+	mask = 1 << (sizeof(int) << 3) - 1;
+	for( ;mask; mask >>= 1)
+	{
+		bitwise_lsb(num, val, a, b) & mask? putchar('1'): putchar('0');
+	}		
+	putchar('\n');
 }
 
 int bitwise_lsb(unsigned num, unsigned val, int a, int b)
 {
 	int bits;
 	bits = b - a + 1;
-	return (~((0xFF << a) & (0xFF >> (7-b))) & val) | ~(0xFF << bits) & num << (b - bits + 1);
+	return (((~((0xFF << a) & (0xFF >> (7-b)))) & (val)) | (((((~(0xFF << bits)) & (num))) << (b - bits + 1))));
 }
