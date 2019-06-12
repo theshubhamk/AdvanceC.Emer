@@ -59,25 +59,45 @@ int main()
 //1
 int get_nbits(unsigned num, int num_of_bits)
 {
-	return (0xFF >> (8 - num_of_bits)) & num;
+	unsigned mask;
+	mask = (0xFF >> (8 - num_of_bits));
+	return mask & num;
 }
 //2
 int replace_nbits(unsigned num, int num_of_bits, unsigned val)
 {
-	return 0xFF << num_of_bits & num | 0xFF >> (8 - num_of_bits) & val;
+	unsigned mask1, mask2, temp1, temp2;
+	mask1 = 0xFF << num_of_bits;
+	temp1 = mask1 & num;
+	mask2 = 0xFF >> (8 - num_of_bits);
+	temp2 = mask2 & val;
+	return temp1 | temp2;
 }
 //3
 int get_nbits_from_pos(unsigned num, int num_of_bits, int pos)
 {
-	return (~(0xFF << num_of_bits)) << (pos - num_of_bits + 1) & num >> (pos - num_of_bits + 1);
+	unsigned mask, temp;
+	mask = (~(0xFF << num_of_bits)) << (pos - num_of_bits + 1);
+	temp = mask & num;
+	return temp >> (pos - num_of_bits + 1);
 }
 //4
 int replace_nbits_from_pos(unsigned num, int num_of_bits, int pos, unsigned val)
 {
-	return ~((~(0xFF << num_of_bits)) << (pos - num_of_bits + 1)) & num | (val & ~(0xFF << num_of_bits)) << (pos - num_of_bits + 1);
+	unsigned mask1, temp1, mask2, temp2;
+	mask1 = ~((~(0xFF << num_of_bits)) << (pos - num_of_bits + 1));
+	temp1 = mask1 & num;
+	mask2 = ~(0xFF << num_of_bits);
+	temp2 = (val & mask2) << (pos - num_of_bits + 1);
+	return temp1 | temp2;
 }
 //5
 int toggle_bits_from_pos(unsigned num, int num_of_bits, int pos)
 {
-	return ~(num) & (~(0xFF << num_of_bits)) << (pos - num_of_bits + 1) | ~((~(0xFF << num_of_bits)) << (pos - num_of_bits + 1)) & num;
+	unsigned mask1, temp1, temp2, mask2;
+	mask1 = (~(0xFF << num_of_bits)) << (pos - num_of_bits + 1);
+	mask2 = ~((~(0xFF << num_of_bits)) << (pos - num_of_bits + 1));
+	temp1 = ~(num) & mask1;
+	temp2 = mask2 & num;
+	return temp1 | temp2;
 }

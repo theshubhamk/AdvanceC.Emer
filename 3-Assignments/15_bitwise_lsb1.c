@@ -39,7 +39,12 @@ int main()
 
 int bitwise_lsb(unsigned num, unsigned val, int a, int b)
 {
-	int bits;
+	int mask1, temp1, mask2, temp2, temp3, bits;
 	bits = b - a + 1;
-	return (~((0xFF << a) & (0xFF >> (7-b))) & val) | ~(0xFF << bits) & num << (b - bits + 1);
+	mask1 = ~((0xFF << a) & (0xFF >> (7-b)));
+	temp1 = (mask1 & val);
+	mask2 = ~(0xFF << bits);
+	temp2 = mask2 & num;
+	temp3 = temp2 << (b - bits + 1);
+	return temp1 | temp3;
 }

@@ -47,10 +47,16 @@ int main()
 
 int circular_right_rot(unsigned num, int n)
 {
-	return num >> (8-n) | num << n;
+	unsigned temp1, temp2;
+	temp1 = num >> (8-n);
+	temp2 = num << n;
+	return temp1 | temp2;
 }
 
 unsigned circular_left_rot(unsigned num, int n)
 {
-	return num << (8-n) | num >> n;
+	unsigned temp1, temp2;
+	temp1 = num << (8-n);
+	temp2 = num >> n;
+	return temp1 | temp2;
 }
