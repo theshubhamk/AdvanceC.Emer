@@ -1,3 +1,9 @@
+/*		TITLE: IMPLEMENT OWN c library. 
+		AUTHOR: Shubham Kumar Singh
+		DATE: Thu june 12 13:07:02 IST 2019
+		DESCRIPTION: Input: A number from user.
+			     Output:prints the c lib outputs.
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
