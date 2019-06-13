@@ -1,14 +1,31 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include<stdio.h>
 
-int fibo(int num);
+int f(int);
 
 int main()
 {
-	//clear screen 
-	system("clear");
+	int n, i = 0, c;
 
-	//decare vars
+	scanf("%d", &n);
 
+	printf("Fibonacci series terms are:\n");
 
+	for (c = 1; c <= n; c++)
+	{
+		if(f(n) <= n)
+		{
+			printf("%d\n", f(i));
+		}
+		i++;
+	}
+
+return 0;
+}
+
+int f(int n)
+{
+	if (n == 0 || n == 1)
+		return n;
+	else
+		return (f(n-1) + f(n-2));
 }
