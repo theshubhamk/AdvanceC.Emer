@@ -28,19 +28,6 @@ int main()
 	//prompt + read user
 	printf("select the option 1. get_nbits 2.replace_nbits 3.replace_nbits 4.replace_n_bits_from_position 5.toggle_n_bits_from_position :\t");
 	scanf("%d", &opt);
-/*
-	printf("Enter the number: ");
-	scanf("%hhd", &num);
-		
-	printf("Enter the no. of bits: ");
-	scanf("%d", &num_of_bits);
-
-	printf("Enter the value: ");
-	scanf("%hhd", &val);
-
-	printf("Enter the position: ");
-	scanf("%d", &pos);
-*/
 	switch (opt)
 	{		
 		case 1:	

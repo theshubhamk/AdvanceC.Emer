@@ -7,65 +7,118 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void is_alnum(int);
-void is_alpha(int);
-void is_ascii(int);
-void is_blank(int);
+int is_alnum(int);
+int is_alpha(int);
+int is_ascii(int);
+int is_blank(int);
 
 int main()
 {
-	//clear scr
-	system("clear");
-	
-	//decare vars
-	char ch;
+	int resp;
+	do
+	{
+		//clear scr
+		system("clear");
+		
+		//decare vars
+		char ch;
+		int op;
 
-	//prompt + read user
-	printf("Enter a char\n");
-	scanf("%c", &ch);
-	
-	is_alnum(ch);
-	is_alpha(ch);
-	is_ascii(ch);
-	is_blank(ch);
+		//prompt + read user
+		printf("Enter a char\n");
+		scanf("%c", &ch);
+		
+		printf("Enter the choice 1. is_alnum 2. is_alpha 3. is_ascii 4. is_blank\n");
+		scanf("%d", &op);
+		
+		switch (op)
+		{
+			case 1: 
+				if(is_alnum(ch))
+				{
+					printf("number\n");
+				}
+				else
+				{
+					printf("alphabet\n");
+				}
+				break;
+			case 2:
+				if(is_alpha(ch) == 21)
+				{
+					printf("upper case\n");
+				}
+				else
+				{
+					printf("lower case\n");
+				}
+				break;
+			case 3:
+				if(is_ascii(ch) == 15)
+				{
+					printf("ASCII\n");
+				}
+				else
+				{
+					printf("not ascii\n");
+				}
+				break;
+			case 4:
+				if(is_blank(ch) == 10)
+				{
+					printf("blank character eneterd\n");
+				}
+				else
+				{
+					printf("Not a blank ch\n");
+				}
+				break;
+			default:
+				printf("Enter correct option\n");
+		}
+		printf("do you want to cont? 1.Y 2.N\n");
+		scanf("%d", &resp);
+		getchar();
+	}while (resp == 1);
 }
 
-void is_alnum(int ch)
+int is_alnum(int ch)
 {
 	if (48 <= ch  & ch <= 57)
 	{
-		printf("number\n");
+		return 0;
 	}
 	else if ((ch <= 90 && ch >= 65) || (97 <= ch && ch <= 122))
 	{
-		printf("alphabet\n");
+		return 1;
 	}
 }
 
-void is_alpha(int ch)
+int is_alpha(int ch)
 {
 	if (ch <= 90 && ch >= 65)
 	{
-		printf("upper case\n");
+		return 21;
 	}
 	else if(97 <= ch && ch <= 122)
 	{
-		printf("lower case\n");
+		return 22;
 	}
 }
 
-void is_ascii(int ch)
+int is_ascii(int ch)
 {
 	if(0 <= ch && ch <= 127)
 	{
-		printf("ASCII\n");
+		return 15;
 	}
 }
 
-void is_blank(int ch)
+int is_blank(int ch)
 {
 	if(ch == 32 || ch == 9)
 	{
-		printf("blank character eneterd\n");
+		return 10;
 	}
+
 }

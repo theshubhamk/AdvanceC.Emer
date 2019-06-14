@@ -1,4 +1,6 @@
-#include<stdio.h>
+
+#include <stdio.h>
+#include <stdlib.h>
 
 int f(int);
 
@@ -12,7 +14,7 @@ int main()
 
 	for (c = 1; c <= n; c++)
 	{
-		if(f(n) <= n)
+		if(f(i) <= n)
 		{
 			printf("%d\n", f(i));
 		}
