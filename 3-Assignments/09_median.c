@@ -1,3 +1,10 @@
+/*		TITLE: sort and find medians
+		AUTHOR: Shubham Kumar Singh
+		DATE: Thu june 13 15:50:58 IST 2019
+		DESCRIPTION: Input: the two arrays with size
+			     Output: Print the sorted array and medians.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 

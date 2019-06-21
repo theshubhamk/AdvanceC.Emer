@@ -9,6 +9,7 @@
 #include <stdlib.h>
 
 int sort(float *,float *);
+void sortedd(int,float);
 
 int main()
 {
@@ -29,6 +30,13 @@ int main()
 		scanf("%f", &A[i]);
 	}
 	//sort 
+	sortedd(n, A[n]);
+
+	return 0;
+}
+void sortedd(int n, float A[n])
+{
+	int i, j;
 	for(j = 0;j < n-1;j++)
 	{
 		for(i = 0;i < n-j-1;i++)
@@ -46,7 +54,6 @@ int main()
 		printf("%f\n", A[i]);
 	}
 
-	return 0;
 }
 //fucntion to sort using swapping
 int sort(float *x, float *y)
