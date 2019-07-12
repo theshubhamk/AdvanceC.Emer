@@ -8,8 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void sort(void *,void *);
-void sortedd(int,void);
+int sort(float *,float *);
+void sortedd(int,float);
 
 int main()
 {
@@ -23,7 +23,7 @@ int main()
 	printf("Enter the size of array\n");
 	scanf("%d", &n);
 
-	void A[n];
+	float A[n];
 	printf("Enter the elements of arary\n");
 	for(i = 0;i < n;i++)
 	{
@@ -34,7 +34,7 @@ int main()
 
 	return 0;
 }
-void sortedd(int n, void A[n])
+void sortedd(int n, float A[n])
 {
 	int i, j;
 	for(j = 0;j < n-1;j++)
@@ -56,9 +56,9 @@ void sortedd(int n, void A[n])
 
 }
 //fucntion to sort using swapping
-int sort(void *x, void *y)
+int sort(float *x, float *y)
 {
-	void temp;
+	float temp;
 	temp = *x;
 	*x = *y;
 	*y = temp;
