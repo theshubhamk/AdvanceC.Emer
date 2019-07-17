@@ -1,5 +1,7 @@
 #include "common.h"
 
+
+
 int copy_head(char **argV)
 {
 	FILE *fs1, *fs2, *fd;
