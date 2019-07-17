@@ -1,0 +1,43 @@
+final_target: dependencies //in next line always give a tab// always keep main.o in last
+	recipie		//recipie is the command to generate the final target	
+	
+sub_target: dependencies //
+	recipie
+
+:
+:
+:
+clean: //built in target // has no dependencies
+	rm *.o *.exe
+			//run this using make clean
+
+//the above way of writing make file is not optimized and is tedious job.
+
+so
+----------------->
+
+OBJ:= add.o mul.o main.o
+final_target: $(OBJ)
+	gcc -o out.exe $(OBJ)
+
+$(OBJ):
+	
+clean: //built in target // has no dependencies
+	rm *.o *.exe
+
+//more optimization
+------------>
+SRC:= $(wildcard *.c) // gets all the .c file in SRC.
+OBJ:= $(patsubst *.c, *.o, $(SRC)) // replace * by % will show all the compilation steps while compiling // creates .o and .c file from SRC .c files
+
+out.exe: $(OBJ)
+	gcc -o $@ $^ // $@ replaces itself by out.exe and $^ replaces itself by $(OBJ)
+	
+clean: //built in target // has no dependencies
+	rm *.o *.exe
+
+run:
+	make && ./calc.exe // this will compile and also run the .exe file after compilaton
+
+//make -f <makefile name> // this is used to run a non standard makefile
+e.g : make -f mymakefile
