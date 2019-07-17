@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	//clear screen
+	system("clear");
+
+	//declare vars
+	int line = 0, word = 1, chara = 0;
+	char c;
+	//read upto the end of file(crtl + D)
+	while((c = getchar()) != EOF)
+	{
+		//if new line pressed increse line count
+		if(c == '\n')
+		{
+			line++;
+		}
+		//if new character detected increase character count
+	//	if((c != ' ') && (c != '\n') && (c != '\0'))
+		if((c != ' ') && (c != '\n') && (c != '\0'))// && ((c == ' ') && (c == '\n') && (c == '\0')))
+		{
+			chara++;
+		}
+		//if new word detected increase word count
+		if((c == ' ') || (c == '\n'))
+		{
+			word++;
+			if(c = NULL)
+			{
+				word--;
+			}
+		}
+	}
+	chara = chara + line;
+	printf("\n");
+	//print them all
+	printf("line :%d \n", line);
+	printf("characters :%d \n", chara);
+	printf("words :%d \n", word);
+}
